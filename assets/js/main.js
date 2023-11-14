@@ -40,6 +40,8 @@ function generateTicket(event) {
     }
 
     // Mostro il biglietto
+    let ticket = document.getElementById('ticket');
+    ticket.classList.remove('d-none');
 
     // Nome e cognome del passeggero
     document.getElementById('user_name').innerHTML = nameLastname;
