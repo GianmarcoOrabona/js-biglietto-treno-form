@@ -20,35 +20,35 @@
         <h1 class="text-center text-uppercase text-light my-4">Calcola il prezzo del tuo biglietto</h1>
 
         <!-- Form -->
-        <form class="row bg-light rounded shadow-lg">
+        <form class="row bg-light rounded shadow-lg" onsubmit="generateTicket(event)">
 
             <!-- User name and last name -->
             <div class="col text-center mt-3 ps-4">
-                <label for="nameLastName" class="form-label fw-bold fs-5">Nome Cognome</label>
-                <input type="text" class="form-control" placeholder="Jon Snow" aria-label="Jon Snow">
+                <label for="nameLastname" class="form-label fw-bold fs-5">Nome Cognome</label>
+                <input type="text" class="form-control" placeholder="Jon Snow" aria-label="Jon Snow" id="name_lastname">
             </div>
 
             <!-- Distance -->
             <div class="col text-center mt-3">
                 <label for="distance" class="form-label fw-bold fs-5">Km da percorrere</label>
-                <input type="number" min="0" class="form-control" placeholder="10 km" aria-label="10 km">
+                <input type="number" min="0" class="form-control" placeholder="10 km" aria-label="10 km" id="distance">
             </div>
 
             <!-- User age range -->
             <div class="col text-center mt-3 pe-4">
                 <label for="ageRange" class="form-label fw-bold fs-5">Fascia d'età</label>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" id="age_range">
                     <option selected disabled>Seleziona la fascia d'età</option>
-                    <option value="1">Minorenne</option>
-                    <option value="2">Maggiorenne</option>
-                    <option value="3">Over 65</option>
+                    <option value="Minorenne">Minorenne</option>
+                    <option value="Maggiorenne">Maggiorenne</option>
+                    <option value="Over 65">Over 65</option>
                 </select>
             </div>
 
             <!-- Form buttons -->
             <div class="text-center mt-5">
                 <button type="submit" class="btn btn-primary btn-md">Genera</button>
-                <button type="submit" class="btn btn-danger btn-md">Annulla</button>
+                <button type="reset" class="btn btn-danger btn-md">Annulla</button>
             </div>
         </form>
         <!-- /Form -->
