@@ -6,16 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Form biglietto</title>
 
-    <!-- My CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+    <div class="container">
+        <h1 class="text-center text-uppercase text-light my-4">Calcola il prezzo del tuo biglietto</h1>
 
+        <!-- Form -->
+        <form class="row bg-light rounded shadow-lg">
+
+            <!-- User name and last name -->
+            <div class="col text-center mt-3 ps-4">
+                <label for="nameLastName" class="form-label fw-bold fs-5">Nome Cognome</label>
+                <input type="text" class="form-control" placeholder="Jon Snow" aria-label="Jon Snow">
+            </div>
+
+            <!-- Distance -->
+            <div class="col text-center mt-3">
+                <label for="distance" class="form-label fw-bold fs-5">Km da percorrere</label>
+                <input type="number" min="0" class="form-control" placeholder="10 km" aria-label="10 km">
+            </div>
+
+            <!-- User age range -->
+            <div class="col text-center mt-3 pe-4">
+                <label for="ageRange" class="form-label fw-bold fs-5">Fascia d'età</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected disabled>Seleziona la fascia d'età</option>
+                    <option value="1">Minorenne</option>
+                    <option value="2">Maggiorenne</option>
+                    <option value="3">Over 65</option>
+                </select>
+            </div>
+
+            <!-- Form buttons -->
+            <div class="text-center mt-5">
+                <button type="submit" class="btn btn-primary btn-md">Genera</button>
+                <button type="submit" class="btn btn-danger btn-md">Annulla</button>
+            </div>
+        </form>
+        <!-- /Form -->
+    </div>
 
     <!-- My Script -->
     <script src="./assets/js/main.js"></script>
